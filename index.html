@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>イラスト配色調和アドバイザー - PaletteHarmony</title>
     <!-- Tailwind CSS for high quality styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome for beautiful icons -->
@@ -130,56 +129,74 @@
                     目指したい目標の設定
                 </h2>
 
-                <!-- Situation / Light -->
+                <!-- Palette Approach -->
                 <div class="space-y-2">
-                    <label class="text-xs font-semibold text-slate-400 block">A. 時間帯・光の環境</label>
-                    <div class="grid grid-cols-3 gap-2" id="situationGroup">
-                        <button type="button" class="situation-btn bg-slate-950 border border-slate-800 text-slate-400 px-3 py-2 rounded-xl text-xs flex flex-col items-center gap-1 transition" data-value="daylight">
-                            <i class="fa-solid fa-sun text-amber-500"></i>
-                            <span>昼の青空</span>
+                    <label class="text-xs font-semibold text-slate-400 block">A. 目指す配色アプローチ（見せ方の方向性）</label>
+                    <div class="grid grid-cols-2 gap-2" id="situationGroup">
+                        <button type="button" class="situation-btn bg-indigo-500/10 border border-indigo-500 text-indigo-300 px-3 py-2.5 rounded-xl text-xs flex flex-col items-center gap-1.5 transition text-center" data-value="harmonize">
+                            <i class="fa-solid fa-circle-half-stroke text-purple-400 text-sm"></i>
+                            <span class="font-bold">全体をなじませる</span>
+                            <span class="text-[9px] text-slate-400 scale-95 font-normal">同系色・トーン調和</span>
                         </button>
-                        <button type="button" class="situation-btn bg-indigo-500/10 border border-indigo-500 text-indigo-300 px-3 py-2 rounded-xl text-xs flex flex-col items-center gap-1 transition" data-value="sunset">
-                            <i class="fa-solid fa-cloud-sun text-orange-400"></i>
-                            <span>夕暮れ時</span>
+                        <button type="button" class="situation-btn bg-slate-950 border border-slate-800 text-slate-400 px-3 py-2.5 rounded-xl text-xs flex flex-col items-center gap-1.5 transition text-center" data-value="contrast">
+                            <i class="fa-solid fa-circle-dot text-amber-400 text-sm"></i>
+                            <span class="font-bold">キャラを際立たせる</span>
+                            <span class="text-[9px] text-slate-500 scale-95 font-normal">コントラスト・補色調和</span>
                         </button>
-                        <button type="button" class="situation-btn bg-slate-950 border border-slate-800 text-slate-400 px-3 py-2 rounded-xl text-xs flex flex-col items-center gap-1 transition" data-value="night">
-                            <i class="fa-solid fa-moon text-indigo-400"></i>
-                            <span>夜・ネオン</span>
+                        <button type="button" class="situation-btn bg-slate-950 border border-slate-800 text-slate-400 px-3 py-2.5 rounded-xl text-xs flex flex-col items-center gap-1.5 transition text-center" data-value="translucent">
+                            <i class="fa-solid fa-wand-magic-sparkles text-sky-400 text-sm"></i>
+                            <span class="font-bold">透明感を出す</span>
+                            <span class="text-[9px] text-slate-500 scale-95 font-normal">高明度・澄んだ空気感</span>
                         </button>
-                        <button type="button" class="situation-btn bg-slate-950 border border-slate-800 text-slate-400 px-3 py-2 rounded-xl text-xs flex flex-col items-center gap-1 transition" data-value="backlight">
-                            <i class="fa-solid fa-lightbulb text-yellow-300"></i>
-                            <span>強い逆光</span>
+                        <button type="button" class="situation-btn bg-slate-950 border border-slate-800 text-slate-400 px-3 py-2.5 rounded-xl text-xs flex flex-col items-center gap-1.5 transition text-center" data-value="dramatic">
+                            <i class="fa-solid fa-masks-theater text-rose-400 text-sm"></i>
+                            <span class="font-bold">ドラマチックな明暗</span>
+                            <span class="text-[9px] text-slate-500 scale-95 font-normal">明暗の対比・シネマ風</span>
                         </button>
-                        <button type="button" class="situation-btn bg-slate-950 border border-slate-800 text-slate-400 px-3 py-2 rounded-xl text-xs flex flex-col items-center gap-1 transition" data-value="indoor">
-                            <i class="fa-solid fa-house-user text-amber-300"></i>
-                            <span>あたたかい室内</span>
+                        <button type="button" class="situation-btn bg-slate-950 border border-slate-800 text-slate-400 px-3 py-2.5 rounded-xl text-xs flex flex-col items-center gap-1.5 transition text-center" data-value="focus">
+                            <i class="fa-solid fa-crosshairs text-emerald-400 text-sm"></i>
+                            <span class="font-bold">主役に視線誘導</span>
+                            <span class="text-[9px] text-slate-500 scale-95 font-normal">顔や表情パーツを引立</span>
                         </button>
-                        <button type="button" class="situation-btn bg-slate-950 border border-slate-800 text-slate-400 px-3 py-2 rounded-xl text-xs flex flex-col items-center gap-1 transition" data-value="cyberpunk">
-                            <i class="fa-solid fa-bolt text-pink-500"></i>
-                            <span>サイバーパンク</span>
+                        <button type="button" class="situation-btn bg-slate-950 border border-slate-800 text-slate-400 px-3 py-2.5 rounded-xl text-xs flex flex-col items-center gap-1.5 transition text-center" data-value="accent">
+                            <i class="fa-solid fa-bolt-lightning text-pink-500 text-sm"></i>
+                            <span class="font-bold">アクセント重視</span>
+                            <span class="text-[9px] text-slate-500 scale-95 font-normal">個性的な差し色・ポップ</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Theme / Atmosphere -->
+                <!-- Theme / Painting Style -->
                 <div class="space-y-2">
-                    <label class="text-xs font-semibold text-slate-400 block">B. テーマ・感情の雰囲気</label>
+                    <label class="text-xs font-semibold text-slate-400 block">B. 塗りのタッチ（画風・塗り方）</label>
                     <div class="grid grid-cols-2 gap-2" id="themeGroup">
-                        <button type="button" class="theme-btn bg-indigo-500/10 border border-indigo-500 text-indigo-300 px-3 py-2 rounded-xl text-xs flex items-center gap-2 transition" data-value="emotional">
-                            <i class="fa-solid fa-heart text-pink-500"></i>
-                            <span>エモい・叙情的</span>
+                        <button type="button" class="theme-btn bg-indigo-500/10 border border-indigo-500 text-indigo-300 px-3 py-2.5 rounded-xl text-xs flex flex-col items-center gap-1 transition" data-value="anime">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-paint-roller text-sky-400"></i>
+                                <span class="font-bold">アニメ塗り・フラット</span>
+                            </div>
+                            <span class="text-[9px] text-slate-400 mt-0.5">はっきりした境界・シンプル配色</span>
                         </button>
-                        <button type="button" class="theme-btn bg-slate-950 border border-slate-800 text-slate-400 px-3 py-2 rounded-xl text-xs flex items-center gap-2 transition" data-value="pop">
-                            <i class="fa-solid fa-wand-magic-sparkles text-amber-400"></i>
-                            <span>ポップ・明るい</span>
+                        <button type="button" class="theme-btn bg-slate-950 border border-slate-800 text-slate-400 px-3 py-2.5 rounded-xl text-xs flex flex-col items-center gap-1 transition" data-value="thick">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-paintbrush text-amber-400"></i>
+                                <span class="font-bold">厚塗り・ブラシ塗り</span>
+                            </div>
+                            <span class="text-[9px] text-slate-500 mt-0.5">複雑な混色・立体感重視</span>
                         </button>
-                        <button type="button" class="theme-btn bg-slate-950 border border-slate-800 text-slate-400 px-3 py-2 rounded-xl text-xs flex items-center gap-2 transition" data-value="dark">
-                            <i class="fa-solid fa-skull text-slate-400"></i>
-                            <span>シリアス・ダーク</span>
+                        <button type="button" class="theme-btn bg-slate-950 border border-slate-800 text-slate-400 px-3 py-2.5 rounded-xl text-xs flex flex-col items-center gap-1 transition" data-value="watercolor">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-droplet text-teal-400"></i>
+                                <span class="font-bold">水彩調・レトロ風</span>
+                            </div>
+                            <span class="text-[9px] text-slate-500 mt-0.5">淡いにじみ・ノスタルジックな質感</span>
                         </button>
-                        <button type="button" class="theme-btn bg-slate-950 border border-slate-800 text-slate-400 px-3 py-2 rounded-xl text-xs flex items-center gap-2 transition" data-value="fantasy">
-                            <i class="fa-solid fa-dragon text-emerald-400"></i>
-                            <span>ファンタジー</span>
+                        <button type="button" class="theme-btn bg-slate-950 border border-slate-800 text-slate-400 px-3 py-2.5 rounded-xl text-xs flex flex-col items-center gap-1 transition" data-value="blended">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-wand-magic-sparkles text-pink-400"></i>
+                                <span class="font-bold">ブラシ＆ぼかし塗り</span>
+                            </div>
+                            <span class="text-[9px] text-slate-500 mt-0.5">柔らかな陰影・今風の透明感</span>
                         </button>
                     </div>
                 </div>
@@ -362,7 +379,7 @@
                             <span class="absolute text-xl font-black font-mono text-white" id="scoreText">85</span>
                         </div>
                         <div>
-                            <h3 class="text-lg font-bold text-slate-100" id="adviceTitle">夕暮れ時の配色にチャレンジ！</h3>
+                            <h3 class="text-lg font-bold text-slate-100" id="adviceTitle">全体の調和アプローチを評価しました！</h3>
                             <p class="text-xs text-slate-400 mt-1">色彩調和スコア: <span id="scoreComment" class="text-indigo-300 font-semibold">良好な構成です</span></p>
                         </div>
                     </div>
@@ -460,8 +477,8 @@
     <script>
         // App State
         let uploadedImage = null;
-        let selectedSituation = 'sunset';
-        let selectedTheme = 'emotional';
+        let selectedSituation = 'harmonize'; // Holds the approach selection (formerly selectedSituation)
+        let selectedTheme = 'anime';       // Holds the paint style selection (formerly selectedTheme)
         let selectedMode = 'praise';
         let originalColors = {
             hair: '#ffccd5',
@@ -470,14 +487,14 @@
             bg: '#2b2d42'
         };
 
-        // Environment Lights Layer Definitions for simulation
+        // Simulated Overlay Properties mapped directly to User Design Intent (Approach)
         const envLights = {
-            daylight: { color: '#8ecae6', mode: 'soft-light', opacity: 0.4 },
-            sunset: { color: '#fb8500', mode: 'multiply', opacity: 0.45 },
-            night: { color: '#1a1b41', mode: 'multiply', opacity: 0.6 },
-            backlight: { color: '#ffb703', mode: 'overlay', opacity: 0.5 },
-            indoor: { color: '#ffddd2', mode: 'color-burn', opacity: 0.3 },
-            cyberpunk: { color: '#ff007f', mode: 'screen', opacity: 0.35 }
+            harmonize: { color: '#9f86c0', mode: 'soft-light', opacity: 0.45, name: '全体をなじませる' },
+            contrast: { color: '#fb8500', mode: 'overlay', opacity: 0.35, name: 'キャラを引き立たせる' },
+            translucent: { color: '#e0f2fe', mode: 'screen', opacity: 0.40, name: '透明感を出す' },
+            dramatic: { color: '#1a1b41', mode: 'multiply', opacity: 0.55, name: 'ドラマチックな明暗' },
+            focus: { color: '#ffe5d9', mode: 'color-burn', opacity: 0.25, name: '主役に視線誘導' },
+            accent: { color: '#ff007f', mode: 'overlay', opacity: 0.30, name: 'アクセント重視' }
         };
 
         // DOM Elements
@@ -695,7 +712,7 @@
 
             // Apply Environment Light Overlay
             const intensity = blendIntensity.value / 100;
-            const env = envLights[selectedSituation] || envLights['sunset'];
+            const env = envLights[selectedSituation] || envLights['harmonize'];
 
             ctx.save();
             ctx.globalAlpha = intensity * env.opacity;
@@ -836,8 +853,8 @@
                     ユーザーからアップロードされたイラストの現在抽出されている各パーツの配色データをベースにして、色彩調和論（トライアド、スプリットコンプリメンタリー、トーン調和、明度コントラスト）に則った具体的かつ実践的な添削アドバイスを行ってください。
 
                     【状況】
-                    - 目指す時間帯・光の環境: ${selectedSituation}
-                    - 目指す情緒的テーマ: ${selectedTheme}
+                    - 目指す配色アプローチ（見せ方の方向性）: ${selectedSituation}
+                    - 目指す塗りのタッチ（画風・塗り方）: ${selectedTheme}
                     - 診断モード: ${selectedMode === 'praise' ? 'ユーザーのモチベーションを爆上げする「褒めて伸ばす」ポジティブ解説' : '理論値から逸脱している部分を容赦なく改善指摘する「ガチ理論分析」'}
 
                     【現在の配色コード】
@@ -1026,38 +1043,47 @@
         // Local fallback in case of no API key or network failure
         function generateLocalAdvisoryFallback() {
             const situationLabels = {
-                sunset: '夕暮れ時',
-                night: '夜・ネオン',
-                daylight: '昼光',
-                backlight: '逆光',
-                indoor: '室内温光',
-                cyberpunk: 'サイバーネオン'
+                harmonize: '全体をなじませる（トーン調和）',
+                contrast: 'キャラを際立たせる（コントラスト・補色調和）',
+                translucent: '透明感を出す（高明度）',
+                dramatic: 'ドラマチックな明暗（シネマ風）',
+                focus: '主役に視線誘導（表情際立つ）',
+                accent: 'アクセント重視（個性ポップ）'
             };
 
+            const styleLabels = {
+                anime: 'アニメ塗り・フラット',
+                thick: '厚塗り・ブラシ塗り',
+                watercolor: '水彩調・レトロ風',
+                blended: 'ブラシ＆ぼかし塗り'
+            };
+
+            const selectedStyleName = styleLabels[selectedTheme] || 'アニメ塗り・フラット';
+
             const advice = {
-                score: Math.floor(Math.random() * 15) + 75,
-                title: `${situationLabels[selectedSituation]}の色彩調和を分析しました`,
-                contrastGrade: "A-",
-                harmonyGrade: "B+",
-                scoreComment: "色の分離を抑える余地があります",
-                overall: `アップロードされた画像は、髪、肌、服それぞれのパーツ固有色は美しく選択されていますが、${situationLabels[selectedSituation]}の「環境の光（環境光）」が全体に十分馴染んでいません。そのため、キャラクターが背景から浮いて見えやすくなっています。特に髪の毛の影色と、背景色のトーンの繋ぎ方に改善の余地があります。`,
+                score: Math.floor(Math.random() * 15) + 78,
+                title: `アプローチ「${situationLabels[selectedSituation]}」の分析結果`,
+                contrastGrade: selectedSituation === 'contrast' || selectedSituation === 'dramatic' ? "A+" : "B+",
+                harmonyGrade: selectedSituation === 'harmonize' || selectedSituation === 'translucent' ? "A" : "B",
+                scoreComment: `${selectedStyleName}の特性に応じた調和の鍵が見つかりました`,
+                overall: `現在のアプローチは「${situationLabels[selectedSituation]}」、描画スタイルは「${selectedStyleName}」が指定されています。抽出された配色を分析すると、パーツごとのコントラスト（特に肌と髪の明度比）は非常に美しく表現されています。ただし、${selectedStyleName}は色の境界のシャープさやグラデーション処理が重要なため、背景色とキャラクターのエッジ部分（輪郭）のなじませ方に工夫が必要です。背景光が一部、キャラクターの肩や髪の境界線にうっすら回り込んでいるような反射表現を施すと、絵全体の質感が一気に向上します。`,
                 strengths: [
-                    "キャラクターの服と髪色に明確な色彩コントラストが設計されています。",
-                    "肌のベースカラーは透明感があり、健康的なトーン配分です。"
+                    "固有色の対比が明快で、キャラクターがどこにいるのかシルエットがひと目で把握できます。",
+                    "肌の明度（明るさ）と背景の暗さのコントラストが良く、顔の周辺への視線誘導が自然にできています。"
                 ],
                 improvements: [
-                    `全体トーンに対して、キャラクターの陰影部分における環境の反射色の乗りが弱いです。`,
-                    `${situationLabels[selectedSituation]}に適した「なじませ乗算レイヤー」を重ねて全体の色相を同一方向に寄せてみましょう。`
+                    `${selectedStyleName}の特性を活かし、境界線に沿って背景と同調する「環境の照り返し色」をわずかにブラシで仕込むことで、より画面に一体感が生まれます。`,
+                    `アプローチ「${situationLabels[selectedSituation]}」に達するため、背景の補色（反対色）をあえて服の影色や差し色の1カ所にブレンドしてみましょう。`
                 ],
                 suggestedColors: {
-                    hair: { suggested: "#fca311", advice: "ハイライトにオレンジ色の差し色を入れてください" },
-                    skin: { suggested: "#ffd166", advice: "影色を赤紫色に寄せるとドラマチックに仕上がります" },
-                    clothes: { suggested: "#073b4c", advice: "彩度を落として背景のトーンと調和させます" },
-                    bg: { suggested: "#118ab2", advice: "キャラクターを引き立てるために輝度を調節します" }
+                    hair: { suggested: "#ffccd5", advice: "ハイライトに環境光の反射色をほんの少し入れると立体感がさらに際立ちます" },
+                    skin: { suggested: "#ffe5d9", advice: "影色の中に、背景のベース色を30%ほど混色してなじませてください" },
+                    clothes: { suggested: "#d8f3dc", advice: "影色をグラデーションにしてぼかすと、スタイル独特の深みが出ます" },
+                    bg: { suggested: "#2b2d42", advice: "アプローチに合わせて、背景のトーンをキャラクターの彩度より一歩控えめにコントロールします" }
                 },
-                paintSoftwareWorkflow: `<strong>STEP 1:</strong> レイヤーの最上部に新規レイヤーを作成し、<strong>ブレンドモードを「乗算」</strong>に設定。<br>
-                                       <strong>STEP 2:</strong> シミュレータでおすすめされたカラー（例：オレンジや薄紫など）で全体を塗りつぶし、不透明度を 15〜20% に下げます。<br>
-                                       <strong>STEP 3:</strong> さらにその上に「オーバーレイ」レイヤーを作成し、光源となる方向に合わせた暖色系グラデーションを不透明度 10% 前後で馴染ませてください。`
+                paintSoftwareWorkflow: `<strong>STEP 1 (スタイル連動):</strong> レイヤーの最上部に「新規乗算レイヤー」を作成。<br>
+                                       <strong>STEP 2:</strong> シミュレータでブレンドされている「環境光カラー」で塗りつぶし、不透明度を 15〜25% に調整して全体をトーン調和させます。<br>
+                                       <strong>STEP 3:</strong> 仕上げに「加算・発光」レイヤーを新規作成し、${selectedStyleName}のタッチに合わせて、髪の毛のハイライトや肩のハイエッジに背景を拾った反射光をエアブラシや硬いブラシで薄く入れます。これにより、馴染み具合とプロっぽさが格段に引き上がります。`
             };
 
             renderAdviceUI(advice);
